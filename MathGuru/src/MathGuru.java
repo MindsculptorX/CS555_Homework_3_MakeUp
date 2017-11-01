@@ -15,6 +15,80 @@ public class MathGuru {
 			Scanner scan = new Scanner(System.in);
 			String str = scan.nextLine().toUpperCase();
 			
+			if(str.equals("1")){
+				System.out.println("You select 2^n, please input the n");
+				int input = Integer.parseInt(scan.nextLine());
+				while(input>20){
+					System.out.println("Please input <= 20, try again.");
+					input = Integer.parseInt(scan.nextLine());
+				}
+				
+				System.out.println(pow2(input));
+				
+				System.out.println("Do you want try again?(yes/no)");
+				String tryAgain = scan.nextLine();
+				while(!tryAgain.equals("yes") && !tryAgain.equals("no")){
+					System.out.println("Please input yes or no!");
+					tryAgain = scan.nextLine();
+				}
+				if(tryAgain.equals("no")){
+					System.out.println("Program terminate!");
+					return;
+				}
+			}else if(str.equals("2")){
+				System.out.println("You select N!, please input the N");
+				int input = Integer.parseInt(scan.nextLine());
+				while(input>20){
+					System.out.println("Please input <= 20, try again.");
+					input = Integer.parseInt(scan.nextLine());
+				}
+				
+				System.out.println(fact(input));
+				
+				System.out.println("Do you want try again?(yes/no)");
+				String tryAgain = scan.nextLine();
+				while(!tryAgain.equals("yes") && !tryAgain.equals("no")){
+					System.out.println("Please input yes or no!");
+					tryAgain = scan.nextLine();
+				}
+				if(tryAgain.equals("no")){
+					System.out.println("Program terminate!");
+					return;
+				}				
+			}else if(str.equals("3")){
+				System.out.println("You select nth number in the Fibonacci, please input the n");
+				int input = Integer.parseInt(scan.nextLine());
+				while(input>20){
+					System.out.println("Please input <= 20, try again.");
+					input = Integer.parseInt(scan.nextLine());
+				}
+				
+				System.out.println(fibo(input));
+				
+				System.out.println("Do you want try again?(yes/no)");
+				String tryAgain = scan.nextLine();
+				while(!tryAgain.equals("yes") && !tryAgain.equals("no")){
+					System.out.println("Please input yes or no!");
+					tryAgain = scan.nextLine();
+				}
+				if(tryAgain.equals("no")){
+					System.out.println("Program terminate!");
+					return;
+				}
+			}else{
+				System.out.println("Please input");
+			}
 		}
 	}
+
+	private static int pow2(int input) {
+		return (int) Math.pow(2, input);
+	}
+	private static int fact(int input) {
+		return 0;
+	}
+	private static int fibo(int input) {
+		return 0;
+	}
+
 }
