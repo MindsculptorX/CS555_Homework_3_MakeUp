@@ -85,10 +85,12 @@ public class MathGuru {
 		return (int) Math.pow(2, input);
 	}
 	private static int fact(int input) {
-		return 0;
+		return input * fact(input-1);
 	}
 	private static int fibo(int input) {
-		return 0;
+		if(input<0){return -1;}//Means Error
+		if(input<2){return 1;}//first two
+		return fibo(input-1) + fibo(input-2);
 	}
 
 }
