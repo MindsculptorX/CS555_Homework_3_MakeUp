@@ -1,5 +1,1 @@
-
-*.class
-.project
-MathGuru/.classpath
-*.prefs
+/bin/
